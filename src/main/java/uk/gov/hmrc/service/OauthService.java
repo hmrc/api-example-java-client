@@ -57,7 +57,7 @@ public class OauthService {
                     .setClientSecret(clientSecret)
                     .setRedirectURI(callbackUrl)
                     .setCode(code)
-                    .buildQueryMessage();
+                    .buildBodyMessage();
 
             return fetchToken(request);
 
@@ -74,7 +74,7 @@ public class OauthService {
                     .setClientId(clientId)
                     .setClientSecret(clientSecret)
                     .setRefreshToken(refreshToken)
-                    .buildQueryMessage();
+                    .buildBodyMessage();
 
             return fetchToken(request);
 
