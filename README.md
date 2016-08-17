@@ -33,6 +33,27 @@ Once running, the application will be available at:
 http://localhost:8080/
 ```
 
+If you need to start your application on another port:
+
+```
+mvn spring-boot:run -Dserver.port=PORT
+```
+
+
+### Troubleshooting
+
+- Make sure that you are using java 8, and that maven is configured to point to your java 8 installation.
+```
+mvn -v
+```
+should return something like:
+```
+Apache Maven 3.3.3
+Maven home: /usr/share/maven
+Java version: 1.8.0_101, vendor: Oracle Corporation
+Java home: /usr/lib/jvm/java-8-oracle/jre
+```
+
 ### License
 
 This code is open source software licensed under the [Apache 2.0 License]("http://www.apache.org/licenses/LICENSE-2.0.html").
