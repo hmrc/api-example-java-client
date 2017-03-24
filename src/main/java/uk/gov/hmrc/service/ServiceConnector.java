@@ -34,7 +34,7 @@ public class ServiceConnector {
     private final HttpClient client;
 
     public ServiceConnector() {
-        client = HttpClientBuilder.create().build();;
+        client = HttpClientBuilder.create().build();
     }
 
     public String get(String url, String acceptHeader, Optional<String> bearerToken) throws UnauthorizedException {
