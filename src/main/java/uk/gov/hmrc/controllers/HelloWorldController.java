@@ -28,7 +28,6 @@ import uk.gov.hmrc.model.Token;
 import uk.gov.hmrc.model.UnauthorizedException;
 import uk.gov.hmrc.service.HelloWorldService;
 import uk.gov.hmrc.service.OauthService;
-import uk.gov.hmrc.util.HeadersHelper;
 
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
@@ -115,9 +114,6 @@ public class HelloWorldController {
                     .setScope("hello")
                     .setRedirectURI(callbackUrl)
                     .buildQueryMessage();
-
-            HeadersHelper.setHeaders(request);
-
             return request.getLocationUri();
 
         } catch (OAuthSystemException e) {

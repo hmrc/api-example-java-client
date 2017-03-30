@@ -24,7 +24,6 @@ import org.apache.http.impl.client.HttpClientBuilder;
 import org.apache.http.util.EntityUtils;
 import org.springframework.stereotype.Component;
 import uk.gov.hmrc.model.UnauthorizedException;
-import uk.gov.hmrc.util.HeadersHelper;
 
 import java.io.IOException;
 
@@ -39,9 +38,6 @@ public class ServiceConnector {
 
     public String get(String url, String acceptHeader, Optional<String> bearerToken) throws UnauthorizedException {
         HttpGet request = new HttpGet(url);
-
-        HeadersHelper.setHeaders(request);
-
         request.addHeader("Accept", acceptHeader);
         if (bearerToken.isPresent()) {
             request.addHeader("Authorization", "Bearer " + bearerToken.get());

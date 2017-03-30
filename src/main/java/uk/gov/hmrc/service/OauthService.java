@@ -26,7 +26,6 @@ import org.apache.oltu.oauth2.common.message.types.GrantType;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 import uk.gov.hmrc.model.Token;
-import uk.gov.hmrc.util.HeadersHelper;
 
 @Component
 public class OauthService {
@@ -60,8 +59,6 @@ public class OauthService {
                     .setCode(code)
                     .buildBodyMessage();
 
-            HeadersHelper.setHeaders(request);
-
             return fetchToken(request);
 
         } catch (Exception e) {
@@ -78,8 +75,6 @@ public class OauthService {
                     .setClientSecret(clientSecret)
                     .setRefreshToken(refreshToken)
                     .buildBodyMessage();
-
-            HeadersHelper.setHeaders(request);
 
             return fetchToken(request);
 
