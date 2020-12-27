@@ -22,6 +22,11 @@ API documentation is available at https://developer.service.hmrc.gov.uk/api-docu
 
 Application developers need to register with the platform and will be provided with key, secret and tokens upon registration.
 
+The project can install maven dependencies with the following command:
+```
+mvn clean install
+```
+
 The server can be started with the following command:
 ```
 mvn spring-boot:run
@@ -30,7 +35,7 @@ mvn spring-boot:run
 Once running, the application will be available at:
 
 ```
-http://localhost:8080/
+http://localhost:8081/
 ```
 
 If you need to start your application on another port:
