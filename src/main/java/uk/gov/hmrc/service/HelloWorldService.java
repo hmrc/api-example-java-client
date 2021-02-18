@@ -38,10 +38,12 @@ public class HelloWorldService {
 
     public String helloWorld() {
         try {
+            Optional<String> bearerToken = Optional.empty();
+            
             return serviceConnector.get(
                     "https://api.service.hmrc.gov.uk/hello/world",
                     "application/vnd.hmrc.1.0+json",
-                    Optional.empty());
+                    bearerToken);
         } catch (UnauthorizedException e) {
             throw new RuntimeException(e);
         }
