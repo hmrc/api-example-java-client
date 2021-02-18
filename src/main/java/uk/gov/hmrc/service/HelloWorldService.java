@@ -16,11 +16,12 @@
 
 package uk.gov.hmrc.service;
 
-import com.google.common.base.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 import uk.gov.hmrc.model.UnauthorizedException;
+
+import java.util.Optional;
 
 @Component
 public class HelloWorldService {
@@ -37,10 +38,12 @@ public class HelloWorldService {
 
     public String helloWorld() {
         try {
+            Optional<String> bearerToken = Optional.empty();
+            
             return serviceConnector.get(
                     "https://api.service.hmrc.gov.uk/hello/world",
                     "application/vnd.hmrc.1.0+json",
-                    Optional.absent());
+                    bearerToken);
         } catch (UnauthorizedException e) {
             throw new RuntimeException(e);
         }

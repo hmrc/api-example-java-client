@@ -16,7 +16,6 @@
 
 package uk.gov.hmrc.service;
 
-import com.google.common.base.Optional;
 import org.apache.http.HttpResponse;
 import org.apache.http.client.HttpClient;
 import org.apache.http.client.methods.HttpGet;
@@ -26,6 +25,7 @@ import org.springframework.stereotype.Component;
 import uk.gov.hmrc.model.UnauthorizedException;
 
 import java.io.IOException;
+import java.util.Optional;
 
 @Component
 public class ServiceConnector {
