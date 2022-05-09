@@ -1,5 +1,5 @@
 /*
- * Copyright 2015 HM Revenue & Customs
+ * Copyright 2022 HM Revenue & Customs
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,23 +14,15 @@
  * limitations under the License.
  */
 
-package uk.gov.hmrc;
+package uk.gov.hmrc.example;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.builder.SpringApplicationBuilder;
-import org.springframework.boot.context.web.SpringBootServletInitializer;
+import org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration;
 
-@SpringBootApplication
-public class HelloWorldApplication extends SpringBootServletInitializer {
-
-	@Override
-	protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
-		return application.sources(HelloWorldApplication.class);
-	}
-
-	public static void main(String[] args) throws Exception {
+@SpringBootApplication(exclude = { SecurityAutoConfiguration.class })
+public class HelloWorldApplication {
+	public static void main(String[] args) {
 		SpringApplication.run(HelloWorldApplication.class, args);
 	}
-
 }
