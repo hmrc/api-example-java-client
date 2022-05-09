@@ -14,7 +14,7 @@ It accesses three endpoints, each with their own authorisation requirements:
 
 The implementation of the Hello User flow requests an OAuth 2.0 access token and subsequently uses that token to access the secured endpoint.
 
-Application developers need to register with the HMRC Developer Hub ('https://developer.service.hmrc.gov.uk').
+Application developers need to register with the HMRC Developer Hub https://developer.service.hmrc.gov.uk.
 
 Once this is done they will need to create an application and subscribe to the Hello World test applicaion.
 
@@ -22,7 +22,7 @@ The client id and client secret for this application can be obtained from the ap
 
 The `client-id` and `client-secret` for the application will need to be added to [`src/main/resources/application.yml`](src/main/resources/application.yml)
 
-You will need to add the `Redirect URI` 'http://localhost:8080' to your HMRC Developer Hub application ('https://developer.service.hmrc.gov.uk/developer/applications/').
+You will need to add the `Redirect URI` 'http://localhost:8080' to your HMRC Developer Hub application https://developer.service.hmrc.gov.uk/developer/applications/.
 
 API documentation is available at https://developer.service.hmrc.gov.uk/api-documentation
 
