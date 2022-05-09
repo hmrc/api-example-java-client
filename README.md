@@ -32,7 +32,7 @@ The server can be started with the following command:
 ./gradlew bootRun
 ```
 
-Once running, the application provides the folllowing endpoints:
+Once running, the application provides the following endpoints:
 
 ```
 http://localhost:8080/hello-world
