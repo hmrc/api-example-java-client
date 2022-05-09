@@ -14,7 +14,7 @@ It accesses three endpoints, each with their own authorisation requirements:
 
 The implementation of the Hello User flow requests an OAuth 2.0 token and subsequently uses that token to access the dummy secured endpoint.
 
-The parameters `clientId`, `clientSecret` and `serverToken` will need to be updated in [`src/main/resources/application.properties`](src/main/resources/application.properties)
+The parameters `clientId` and `clientSecret` will need to be updated in [`src/main/resources/application.properties`](src/main/resources/application.properties)
 
 You will need to add the `Redirect URI` 'http://localhost:8080' to your application ('https://developer.service.hmrc.gov.uk/developer/applications/').
 
