@@ -14,13 +14,14 @@ It accesses three endpoints, each with their own authorisation requirements:
 
 The implementation of the Hello User flow requests an OAuth 2.0 access token and subsequently uses that token to access the secured endpoint.
 
-The parameters `client-id` and `client-secret` will need to be updated in [`src/main/resources/application.yml`](src/main/resources/application.yml)
+Application developers need to register with the platform and will be provided with client id and client secret upon registration.
+
+The `client-id` and `client-secret` for the application will need to be added to [`src/main/resources/application.yml`](src/main/resources/application.yml)
 
 You will need to add the `Redirect URI` 'http://localhost:8080' to your Dev Hub application ('https://developer.service.hmrc.gov.uk/developer/applications/').
 
 API documentation is available at https://developer.service.hmrc.gov.uk/api-documentation
 
-Application developers need to register with the platform and will be provided with key, secret and tokens upon registration.
 
 The server can be started with the following command:
 ```
